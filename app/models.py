@@ -1,0 +1,27 @@
+from django.db import models
+
+# Create your models here.
+class Devicedata(models.Model):
+    imei = models.CharField(max_length=10)
+    datavia = models.CharField(max_length=20)
+    latitude = models.FloatField()
+    longitude = models.FloatField()
+    cell1v = models.FloatField()
+    cell2v = models.FloatField()
+    cell3v = models.FloatField()
+    cell4v = models.FloatField()
+    cell5v = models.FloatField()
+    cell6v = models.FloatField()
+    cell7v = models.FloatField()
+    cell8v = models.FloatField()
+    cell9v = models.FloatField()
+    cell10v = models.FloatField()
+    cell11v = models.FloatField()
+    cell12v = models.FloatField()
+    cell13v = models.FloatField()
+    cell14v = models.FloatField()
+    avgv = models.FloatField()
+    packv = models.FloatField()
+    current = models.FloatField()
+    soc = models.FloatField()
+    created_on = models.CharField(max_length=20)

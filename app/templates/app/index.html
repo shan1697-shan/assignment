@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Chat Rooms</title>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        </style>
+</head>
+<body>
+    <table style="border: 1px;">
+        <tr>
+            <th>Device Id</th>
+            <th>Battery Level</th>
+            <th>Pack Voltage</th>
+            <th>Date-Time</th>
+            <th></th>
+            <th></th>
+        </tr>
+    {% for i in devices %}
+        <tr>
+            <td>{{i.0}}</td>
+            <td style="background-color:{{i.4}}">{{i.1}}</td>
+            <td style="background-color:{{i.5}}">{{i.2}}</td>
+            <td>{{i.3}}</td>
+            <td><a href="1/"><button>update</button></a></td>
+            <td><a href="#"><button>Restart</button></a></td>
+        </tr>
+    {% endfor %}
+    </table>
+    <!-- What chat room would you like to enter?<br>
+    <input id="room-name-input" type="text" size="100"><br>
+    <input id="room-name-submit" type="button" value="Enter">
+
+    <script>
+        document.querySelector('#room-name-input').focus();
+        document.querySelector('#room-name-input').onkeyup = function(e) {
+            if (e.keyCode === 13) {  // enter, return
+                document.querySelector('#room-name-submit').click();
+            }
+        };
+
+        document.querySelector('#room-name-submit').onclick = function(e) {
+            var roomName = document.querySelector('#room-name-input').value;
+            window.location.pathname = '/app/' + roomName + '/';
+        };
+    </script> -->
+</body>
+</html>
